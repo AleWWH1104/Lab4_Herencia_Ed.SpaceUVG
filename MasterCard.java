@@ -1,17 +1,17 @@
 // Si el primer dígito de la tarjeta es un 5 entonces es una tarjeta Mastercard
 
-public class MasterCard implements Pasarela_Pago {
+public class MasterCard extends Transaction{
 
-    @Override
-    public void procesar_pago() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'procesar_pago'");
+    private String codeHashMD5;
+    private long cifEmperador;
+
+    
+    public MasterCard(String user, int id, String publicKey, double amount, long cardNumber, int expirationDate, int cvv) {
+        super(user, id, publicKey, amount, cardNumber, expirationDate, cvv);
     }
-
-    @Override
-    public void cambiar_pasarela(Pasarela_Pago nuevaPasarela) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'cambiar_pasarela'");
+    
+    public long getCifEmperador() {
+        return cifradoEmperador.cifrar(this.getCardNumber(), 3);
     }
     
 }
