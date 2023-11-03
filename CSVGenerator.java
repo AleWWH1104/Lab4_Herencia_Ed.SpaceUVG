@@ -10,7 +10,8 @@ public class CSVGenerator {
     }
 
     public void escribirCSV(List<AmericanExpress> transacciones) {
-        try (FileWriter writer = new FileWriter(rutaArchivoCSV, true)) { // El true indica que se añadirán datos al archivo existente
+        try (FileWriter writer = new FileWriter(rutaArchivoCSV, true)) { // El true indica que se añadirán datos al
+                                                                         // archivo existente
             for (AmericanExpress transaccion : transacciones) {
                 // Obtener los datos de la transacción
                 String usuario = transaccion.getUser();

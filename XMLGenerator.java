@@ -3,21 +3,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class XMLGenerator {
-    public void generarXML(Visa visa, String nombreArchivo) {
-        // Lógica para generar el archivo XML a partir de una sola transacción Visa
-        String xmlData = "<Transaccion>\n" +
-                         "  <User>" + visa.getUser() + "</User>\n" +
-                         "  <Id>" + visa.getId() + "</Id>\n" +
-                         "  <PublicKey>" + visa.getPublicKey() + "</PublicKey>\n" +
-                         "  <Amount>" + visa.getAmount() + "</Amount>\n" +
-                         "  <!-- Otros campos de la transacción -->\n" +
-                         "</Transaccion>";
-
-        guardarArchivoXML(xmlData, nombreArchivo);
-    }
-
     public void generarXML(List<Visa> transacciones, String nombreArchivo) {
-        // Lógica para generar un archivo XML a partir de una lista de transacciones Visa
         StringBuilder xmlData = new StringBuilder();
         xmlData.append("<Transacciones>\n");
         for (Visa visa : transacciones) {
