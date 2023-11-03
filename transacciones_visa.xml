@@ -1,0 +1,16 @@
+<Transacciones>
+  <Transaccion>
+    <User>Usuario1</User>
+    <Id>1</Id>
+    <PublicKey>Public1</PublicKey>
+    <Amount>100.0</Amount>
+    <!-- Otros campos de la transacción -->
+  </Transaccion>
+  <Transaccion>
+    <User>Usuario2</User>
+    <Id>2</Id>
+    <PublicKey>Public2</PublicKey>
+    <Amount>200.0</Amount>
+    <!-- Otros campos de la transacción -->
+  </Transaccion>
+</Transacciones>

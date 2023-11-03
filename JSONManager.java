@@ -33,4 +33,10 @@ public class JSONManager implements GenerarArchivosI, CargarArchivosI<HashMap<St
 
         return data;
     }
+
+    @Override
+    public void generarArchivo(List transacciones, String path) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'generarArchivo'");
+    }
 }
