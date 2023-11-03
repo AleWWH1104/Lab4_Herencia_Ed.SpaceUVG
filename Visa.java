@@ -4,8 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 public class Visa implements Pasarela_Pago {
-    private Pasarela_Pago pasarelaSustituta; // Variable para la nueva pasarela de pago
-
     @Override
     public void procesar_pago(List<Map<String, Object>> transactions) {
         for (Map<String, Object> transactionData : transactions) {
@@ -24,8 +22,6 @@ public class Visa implements Pasarela_Pago {
 
     @Override
     public void cambiar_pasarela(Pasarela_Pago nuevaPasarela) {
-
-        pasarelaSustituta = nuevaPasarela;
     }
 
     // Método para formatear el archivo a XML
