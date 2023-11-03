@@ -5,7 +5,7 @@ public class Visa extends Transaction implements Pasarela_Pago {
     private double totalAmount;
 
     public Visa(String user, int id, String publicKey, double amount, int cuotas, long cardNumber, int expirationDate, int cvv) {
-        super(user, id, publicKey, amount,cuotas, cardNumber, expirationDate, cvv);
+        super(user, id, publicKey, amount, cuotas, cardNumber, expirationDate, cvv);
     }
 
     @Override
@@ -19,6 +19,17 @@ public class Visa extends Transaction implements Pasarela_Pago {
 
     @Override
     public void cambiar_pasarela(Pasarela_Pago nuevaPasarela) {
+        if (nuevaPasarela instanceof Visa) {
+            Visa nuevaVisa = (Visa) nuevaPasarela;
+            this.setUser(nuevaVisa.getUser());
+            this.setId(nuevaVisa.getId());
+            this.setPublicKey(nuevaVisa.getPublicKey());
+            this.setAmount(nuevaVisa.getAmount());
+            this.setCuotas(nuevaVisa.getCuotas());
+            this.setCardNumber(nuevaVisa.getCardNumber());
+            this.setExpirationDate(nuevaVisa.getExpirationDate());
+            this.setCvv(nuevaVisa.getCvv());
+        }
     }
 
     public double getOriginalAmount() {

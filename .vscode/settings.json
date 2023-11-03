@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/Users/nancymolina/Desktop/ejerciciosjava/Ejercicio5_APA/Lab4_Herencia_Ed.SpaceUVG/**/*.jar"
+    ]
+}
