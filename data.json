@@ -1,0 +1,152 @@
+[
+    {
+        "usuario": "EjemploUsuario1",
+        "id": 12345,
+        "public_key": "claveP1",
+        "monto": 100.50,
+        "cuotas": 3,
+        "numero_de_tarjeta": 4234567890123456,
+        "fecha_de_vencimiento": 1225,
+        "codigo_CVV": 123
+    },
+    {
+        "usuario": "EjemploUsuario2",
+        "id": 67890,
+        "public_key": "claveP2",
+        "monto": 75.25,
+        "cuotas": 2,
+        "numero_de_tarjeta": 9876543210987654,
+        "fecha_de_vencimiento": 0624,
+        "codigo_CVV": 456
+    },
+    {
+        "usuario": "EjemploUsuario3",
+        "id": 54321,
+        "public_key": "claveP3",
+        "monto": 200.75,
+        "cuotas": 4,
+        "numero_de_tarjeta": 1111222233334444,
+        "fecha_de_vencimiento": 0923,
+        "codigo_CVV": 789
+    },
+    {
+        "usuario": "EjemploUsuario4",
+        "id": 13579,
+        "public_key": "claveP4",
+        "monto": 50.00,
+        "cuotas": 1,
+        "numero_de_tarjeta": 5555666677778888,
+        "fecha_de_vencimiento": 0326,
+        "codigo_CVV": 246
+    },
+    {
+        "usuario": "EjemploUsuario5",
+        "id": 98765,
+        "public_key": "claveP5",
+        "monto": 150.25,
+        "cuotas": 5,
+        "numero_de_tarjeta": 9999000011112222,
+        "fecha_de_vencimiento": 1127,
+        "codigo_CVV": 987
+    },
+    {
+        "usuario": "EjemploUsuario6",
+        "id": 86420,
+        "public_key": "claveP6",
+        "monto": 80.75,
+        "cuotas": 3,
+        "numero_de_tarjeta": 7777666655554444,
+        "fecha_de_vencimiento": 0823,
+        "codigo_CVV": 543
+    },
+    {
+        "usuario": "EjemploUsuario7",
+        "id": 24680,
+        "public_key": "claveP7",
+        "monto": 120.00,
+        "cuotas": 2,
+        "numero_de_tarjeta": 1234123412341234,
+        "fecha_de_vencimiento": 0525,
+        "codigo_CVV": 789
+    },
+    {
+        "usuario": "EjemploUsuario8",
+        "id": 11111,
+        "public_key": "claveP8",
+        "monto": 70.50,
+        "cuotas": 3,
+        "numero_de_tarjeta": 2222333344445555,
+        "fecha_de_vencimiento": 1024,
+        "codigo_CVV": 654
+    },
+    {
+        "usuario": "EjemploUsuario9",
+        "id": 99999,
+        "public_key": "claveP9",
+        "monto": 250.75,
+        "cuotas": 6,
+        "numero_de_tarjeta": 7777888899990000,
+        "fecha_de_vencimiento": 0128,
+        "codigo_CVV": 123
+    },
+    {
+        "usuario": "EjemploUsuario10",
+        "id": 77777,
+        "public_key": "claveP10",
+        "monto": 95.25,
+        "cuotas": 4,
+        "numero_de_tarjeta": 5555444433332222,
+        "fecha_de_vencimiento": 0726,
+        "codigo_CVV": 456
+    },
+    {
+        "usuario": "EjemploUsuario11",
+        "id": 55555,
+        "public_key": "claveP11",
+        "monto": 175.50,
+        "cuotas": 3,
+        "numero_de_tarjeta": 4444333322221111,
+        "fecha_de_vencimiento": 0125,
+        "codigo_CVV": 789
+    },
+    {
+        "usuario": "EjemploUsuario12",
+        "id": 22222,
+        "public_key": "claveP12",
+        "monto": 60.00,
+        "cuotas": 2,
+        "numero_de_tarjeta": 9999888877776666,
+        "fecha_de_vencimiento": 0426,
+        "codigo_CVV": 246
+    },
+    {
+        "usuario": "EjemploUsuario13",
+        "id": 44444,
+        "public_key": "claveP13",
+        "monto": 135.25,
+        "cuotas": 5,
+        "numero_de_tarjeta": 3333222211110000,
+        "fecha_de_vencimiento": 0927,
+        "codigo_CVV": 987
+    },
+    {
+        "usuario": "EjemploUsuario14",
+        "id": 33333,
+        "public_key": "claveP14",
+        "monto": 90.75,
+        "cuotas": 3,
+        "numero_de_tarjeta": 7777666655554444,
+        "fecha_de_vencimiento": 0623,
+        "codigo_CVV": 543
+    },
+    {
+        "usuario": "EjemploUsuario15",
+        "id": 66666,
+        "public_key": "claveP15",
+        "monto": 110.00,
+        "cuotas": 2,
+        "numero_de_tarjeta": 1234123412341234,
+        "fecha_de_vencimiento": 1124,
+        "codigo_CVV": 789
+    }
+]
