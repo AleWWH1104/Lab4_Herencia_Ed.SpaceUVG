@@ -1,6 +1,3 @@
-import java.util.List;
-import java.util.Map;
-
 // Si el primer dígito de la tarjeta es un 5 entonces es una tarjeta Mastercard
 
 public class MasterCard extends Transaction{
@@ -9,8 +6,7 @@ public class MasterCard extends Transaction{
     private long cifEmperador;
 
     
-    public MasterCard(String user, int id, String publicKey, double amount, long cardNumber, int expirationDate,
-    int cvv) {
+    public MasterCard(String user, int id, String publicKey, double amount, long cardNumber, int expirationDate, int cvv) {
         super(user, id, publicKey, amount, cardNumber, expirationDate, cvv);
     }
     

@@ -3,15 +3,17 @@ public class Transaction {
     private int id;
     private String publicKey;
     private double amount;
+    private int cuotas;
     private long cardNumber;
     private int expirationDate;
     private int cvv;
 
-    public Transaction(String user, int id, String publicKey, double amount, long cardNumber, int expirationDate, int cvv) {
+    public Transaction(String user, int id, String publicKey, double amount, int cuotas, long cardNumber, int expirationDate, int cvv) {
         this.user = user;
         this.id = id;
         this.publicKey = publicKey;
         this.amount = amount;
+        this.cuotas = cuotas;
         this.cardNumber = cardNumber;
         this.expirationDate = expirationDate;
         this.cvv = cvv;
@@ -47,6 +49,14 @@ public class Transaction {
 
     public void setAmount(double amount) {
         this.amount = amount;
+    }
+
+    public int getCuotas() {
+        return cuotas;
+    }
+
+    public void setCuotas(int cuotas) {
+        this.cuotas = cuotas;
     }
 
     public long getCardNumber() {
