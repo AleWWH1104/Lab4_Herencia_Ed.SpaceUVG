@@ -2,8 +2,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-public class CSVGenerator {
-    public void escribirCSV(List<AmericanExpress> transacciones, String rutaArchivoCSV) {
+public class CSVGenerator implements GenerarArchivosI<AmericanExpress>{
+    
+    @Override
+    public void generarArchivo(List<AmericanExpress> transacciones, String rutaArchivoCSV) {
         try (FileWriter writer = new FileWriter(rutaArchivoCSV, true)) { // El true indica que se añadirán datos al
                                                                          // archivo existente
             for (AmericanExpress transaccion : transacciones) {
