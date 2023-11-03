@@ -1,5 +1,7 @@
-public class AmericanExpress extends Transaction implements Pasarela_Pago {
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
+public class AmericanExpress extends Transaction implements Pasarela_Pago {
     private StringBuilder hashMD5;
 
     public void setHashMD5(StringBuilder hashMD5) {
@@ -15,6 +17,7 @@ public class AmericanExpress extends Transaction implements Pasarela_Pago {
         super(user, id, publicKey, amount,cuotas, cardNumber, expirationDate, cvv);
         this.hashMD5 = hashMD5;
     }
+    
     @Override
     public void procesar_pago() {
         Double montoOriginal = this.getAmount();
@@ -29,8 +32,26 @@ public class AmericanExpress extends Transaction implements Pasarela_Pago {
         this.setAmount(nuevoMonto); 
     }
 
+    public void generarHashMD5(){
+         try {
+            String usuario = this.getUser();
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            byte[] hashBytes = md.digest(usuario.getBytes());
+
+            StringBuilder hashString = new StringBuilder();
+            for (byte b : hashBytes) {
+                hashString.append(String.format("%02x", b));
+            }
+
+            this.setHashMD5(hashString);
+        } catch (NoSuchAlgorithmException e) {
+            System.err.println("Algoritmo MD5 no compatible.");
+        }
+
+    }
+
     @Override
     public void cambiar_pasarela(Pasarela_Pago nuevaPasarela) {
-      }
+    }
     
 }
