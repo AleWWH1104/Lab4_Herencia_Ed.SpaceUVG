@@ -21,6 +21,7 @@ public class AmericanExpress extends Transaction implements Pasarela_Pago {
         int cuotas = this.getCuotas();
         if (cuotas > 1) {
             servicio += 0.15 * montoOriginal;
+            
         }
         double nuevoMonto = montoOriginal + servicio;
         this.setAmount(nuevoMonto);
