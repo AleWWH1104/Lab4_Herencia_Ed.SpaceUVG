@@ -4,8 +4,8 @@ public class Visa extends Transaction {
     private double iva;
     private double totalAmount;
 
-    public Visa(String user, int id, String publicKey, double amount, long cardNumber, int expirationDate, int cvv) {
-        super(user, id, publicKey, amount, cardNumber, expirationDate, cvv);
+    public Visa(String user, int id, String publicKey, double amount, int cuotas, long cardNumber, int expirationDate, int cvv) {
+        super(user, id, publicKey, amount,cuotas, cardNumber, expirationDate, cvv);
         calcularMontos();
     }
 

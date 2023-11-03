@@ -1,12 +1,9 @@
-import java.util.List;
-import java.util.Map;
-
 // Si el primer dígito de la tarjeta es un 5 entonces es una tarjeta Mastercard
 
 public class MasterCard implements Pasarela_Pago {
 
     @Override
-    public void procesar_pago(List<Map<String, Object>> transactions) {
+    public void procesar_pago() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'procesar_pago'");
     }
