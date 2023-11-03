@@ -17,7 +17,17 @@ public class AmericanExpress extends Transaction implements Pasarela_Pago {
     }
     @Override
     public void procesar_pago() {
+        Double montoOriginal = this.getAmount();
+        //7% de servicio
+        Double servicio = 0.07 * montoOriginal;
+        Integer cuotas = this.getCuotas();
+        if (cuotas != null && cuotas > 1){
+            // Si hay cuotas, incrementa el monto en un 15%
+            servicio = servicio + (0.15 * montoOriginal);
         }
+        double nuevoMonto = montoOriginal + servicio;
+        this.setAmount(nuevoMonto); 
+    }
 
     @Override
     public void cambiar_pasarela(Pasarela_Pago nuevaPasarela) {
