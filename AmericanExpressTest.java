@@ -6,7 +6,8 @@ public class AmericanExpressTest {
     @Test
     public void testProcesarPago() {
         // Crear una instancia de AmericanExpress para realizar pruebas
-        AmericanExpress amex = new AmericanExpress("Usuario", 123, "Public_Key", 100.0, 2, 1234567890, 1231, 123);
+        AmericanExpress amex = new AmericanExpress("Usuario", 123, "Public_Key", 100.0, 2, 1234567890123456L, 1231,
+                123);
 
         // Obtener el monto original antes de procesar el pago
         double montoTotal = amex.getAmount();
@@ -20,7 +21,8 @@ public class AmericanExpressTest {
     @Test
     public void testGenerateHashMD5() {
         // Crear una instancia de AmericanExpress para realizar pruebas
-        AmericanExpress amex = new AmericanExpress("Usuario", 123, "Public_Key", 100.0, 2, 1234567890, 1231, 123);
+        AmericanExpress amex = new AmericanExpress("Usuario", 123, "Public_Key", 100.0, 2, 1234567890123456L, 1231,
+                123);
 
         // Llamar al método para generar el hash MD5
         StringBuilder hashMD5 = amex.generateHashMD5("Usuario");
