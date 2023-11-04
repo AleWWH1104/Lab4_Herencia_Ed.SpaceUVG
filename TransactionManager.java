@@ -14,6 +14,6 @@ public class TransactionManager {
 
         // Generar el archivo XML con la información de las transacciones Visa
         XMLGenerator xmlGenerator = new XMLGenerator();
-        xmlGenerator.generarXML(transaccionesVisa, "transacciones_visa.xml");
+        xmlGenerator.generarArchivo(transaccionesVisa, "transacciones_visa.xml");
     }
 }
