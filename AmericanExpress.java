@@ -27,7 +27,7 @@ public class AmericanExpress extends Transaction implements Pasarela_Pago {
         this.setAmount(nuevoMonto);
     }
 
-    private StringBuilder generateHashMD5(String input) {
+    public StringBuilder generateHashMD5(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             byte[] hashBytes = md.digest(input.getBytes());
