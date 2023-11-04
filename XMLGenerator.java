@@ -2,8 +2,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-public class XMLGenerator {
-    public void generarXML(List<Visa> transacciones, String nombreArchivo) {
+public class XMLGenerator implements GenerarArchivosI<Visa> {
+
+    @Override
+    public void generarArchivo(List<Visa> transacciones, String nombreArchivo) {
         StringBuilder xmlData = new StringBuilder();
         xmlData.append("<Transacciones>\n");
         for (Visa visa : transacciones) {
