@@ -3,7 +3,11 @@ import java.io.IOException;
 import java.util.List;
 
 public class XMLGenerator implements GenerarArchivosI<Visa> {
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 058c69771668c8f4d83c4d2cd57dbcff2c9f2748
     @Override
     public void generarArchivo(List<Visa> transacciones, String nombreArchivo) {
         StringBuilder xmlData = new StringBuilder();
