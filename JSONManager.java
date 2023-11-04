@@ -4,19 +4,32 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import java.io.FileWriter;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 import com.google.gson.Gson;
 
+/**
+ * La clase JSONManager se encarga de cargar datos desde un archivo JSON y generar archivos JSON a partir de transacciones MasterCard.
+ * Implementa las interfaces GenerarArchivosI y CargarArchivosI.
+ *
+ * @author Jonathan Diaz & David Dominguez
+ * @version 1.0
+ * @since 2023-11-3
+ */
 public class JSONManager implements GenerarArchivosI<MasterCard>, CargarArchivosI<HashMap<String, Object>> {
 
+    /**
+     * Carga datos desde un archivo JSON y los devuelve como una lista de mapas.
+     *
+     * @param filePath Ruta del archivo JSON desde el cual cargar los datos.
+     * @return Una lista de mapas que representan los datos cargados desde el archivo JSON.
+     */
     @Override
     public List<HashMap<String, Object>> loadData(String filePath) {
         JSONParser parser = new JSONParser();
@@ -40,8 +53,14 @@ public class JSONManager implements GenerarArchivosI<MasterCard>, CargarArchivos
         return data;
     }
 
+    /**
+     * Genera un archivo JSON a partir de una lista de transacciones MasterCard.
+     *
+     * @param transacciones     Lista de transacciones de MasterCard a ser convertidas en JSON.
+     * @param rutaArchivoJSON   Ruta del archivo JSON de salida.
+     */
     @Override
-    public void generarArchivo(List<MasterCard> transacciones, String rutaArchivoCSV) {
+    public void generarArchivo(List<MasterCard> transacciones, String rutaArchivoJSON) {
         try {
             // Crear una lista para almacenar las transacciones en formato JSON
             List<Map<String, Object>> jsonTransacciones = new ArrayList<>();
@@ -53,7 +72,6 @@ public class JSONManager implements GenerarArchivosI<MasterCard>, CargarArchivos
                 jsonTransaccion.put("id", transaccion.getId());
                 jsonTransaccion.put("publicKey", transaccion.getPublicKey());
                 jsonTransaccion.put("amount", transaccion.getAmount());
-
 
                 long cardNumber = transaccion.getCifEmperador();
 
@@ -84,6 +102,12 @@ public class JSONManager implements GenerarArchivosI<MasterCard>, CargarArchivos
         }
     }
 
+    /**
+     * Genera un hash MD5 a partir de una cadena de entrada.
+     *
+     * @param input La cadena de entrada para la cual se calculará el hash MD5.
+     * @return Un StringBuilder que contiene el hash MD5 en formato hexadecimal.
+     */
     private StringBuilder generateHashMD5(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
