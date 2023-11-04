@@ -2,24 +2,19 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-<<<<<<< HEAD
 /**
- * Clase que se encarga de generar archivos XML a partir de una lista de transacciones Visa.
+ * Clase que se encarga de generar archivos XML a partir de una lista de
+ * transacciones Visa.
  */
-public class XMLGenerator {
+public class XMLGenerator implements GenerarArchivosI<Visa> {
     /**
      * Genera un archivo XML con la información de las transacciones Visa.
      *
-     * @param transacciones   Lista de transacciones Visa a incluir en el archivo XML.
-     * @param nombreArchivo   Nombre del archivo XML a generar.
+     * @param transacciones Lista de transacciones Visa a incluir en el archivo XML.
+     * @param nombreArchivo Nombre del archivo XML a generar.
      */
-    public void generarXML(List<Visa> transacciones, String nombreArchivo) {
-=======
-public class XMLGenerator implements GenerarArchivosI<Visa> {
-
     @Override
     public void generarArchivo(List<Visa> transacciones, String nombreArchivo) {
->>>>>>> e64987d735db7d2f9d939802953cf2ed9710df11
         StringBuilder xmlData = new StringBuilder();
         xmlData.append("<Transacciones>\n");
         for (Visa visa : transacciones) {
@@ -39,8 +34,8 @@ public class XMLGenerator implements GenerarArchivosI<Visa> {
     /**
      * Guarda un archivo XML con los datos proporcionados en la cadena xmlData.
      *
-     * @param xmlData        Cadena de datos XML a escribir en el archivo.
-     * @param nombreArchivo  Nombre del archivo XML a generar.
+     * @param xmlData       Cadena de datos XML a escribir en el archivo.
+     * @param nombreArchivo Nombre del archivo XML a generar.
      */
     private void guardarArchivoXML(String xmlData, String nombreArchivo) {
         try (FileWriter fileWriter = new FileWriter(nombreArchivo)) {
