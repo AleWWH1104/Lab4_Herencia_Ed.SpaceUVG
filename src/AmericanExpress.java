@@ -8,9 +8,9 @@ import java.security.NoSuchAlgorithmException;
  * Proporciona métodos para procesar el pago y generar un hash MD5 a partir del
  * nombre de usuario.
  *
- * @author [Tu Nombre]
+ * @author Iris
  * @version 1.0
- * @since [Fecha de Creación]
+ * @since 3 11 23
  */
 public class AmericanExpress extends Transaction implements Pasarela_Pago {
     private StringBuilder hashMD5;

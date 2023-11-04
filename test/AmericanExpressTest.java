@@ -1,8 +1,21 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+/**
+ * La clase AmericanExpressTest contiene pruebas unitarias para la clase
+ * AmericanExpress.
+ * Se centra en probar el método de procesamiento de pagos y el método de
+ * generación de hash MD5.
+ *
+ * @author Iris
+ * @version 1.0
+ * @since 3 11 23
+ */
 public class AmericanExpressTest {
 
+    /**
+     * Prueba el método de procesamiento de pagos de la clase AmericanExpress.
+     */
     @Test
     public void testProcesarPago() {
         // Crear una instancia de AmericanExpress para realizar pruebas
@@ -18,6 +31,9 @@ public class AmericanExpressTest {
         assertEquals(122.0, montoTotal, 0.01); // Se espera un monto de 122.0 con un margen de error de 0.01
     }
 
+    /**
+     * Prueba el método de generación de hash MD5 de la clase AmericanExpress.
+     */
     @Test
     public void testGenerateHashMD5() {
         // Crear una instancia de AmericanExpress para realizar pruebas
