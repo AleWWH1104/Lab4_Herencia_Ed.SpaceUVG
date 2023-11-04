@@ -54,10 +54,9 @@ public class JSONManager implements GenerarArchivosI<MasterCard>, CargarArchivos
                 jsonTransaccion.put("publicKey", transaccion.getPublicKey());
                 jsonTransaccion.put("amount", transaccion.getAmount());
 
-                // Encriptar el número de tarjeta con el algoritmo de cifrado del emperador
+
                 long cardNumber = transaccion.getCifEmperador();
 
-                // Agregar el número de tarjeta encriptado al JSON
                 jsonTransaccion.put("cardNumber", cardNumber);
 
                 // Agregar la transacción a la lista de transacciones en formato JSON
@@ -85,7 +84,6 @@ public class JSONManager implements GenerarArchivosI<MasterCard>, CargarArchivos
         }
     }
 
-    // Método para calcular el hash MD5 de una cadena
     private StringBuilder generateHashMD5(String input) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
