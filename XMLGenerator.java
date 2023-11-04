@@ -2,7 +2,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Clase que se encarga de generar archivos XML a partir de una lista de transacciones Visa.
+ */
 public class XMLGenerator {
+    /**
+     * Genera un archivo XML con la información de las transacciones Visa.
+     *
+     * @param transacciones   Lista de transacciones Visa a incluir en el archivo XML.
+     * @param nombreArchivo   Nombre del archivo XML a generar.
+     */
     public void generarXML(List<Visa> transacciones, String nombreArchivo) {
         StringBuilder xmlData = new StringBuilder();
         xmlData.append("<Transacciones>\n");
@@ -20,6 +29,12 @@ public class XMLGenerator {
         guardarArchivoXML(xmlData.toString(), nombreArchivo);
     }
 
+    /**
+     * Guarda un archivo XML con los datos proporcionados en la cadena xmlData.
+     *
+     * @param xmlData        Cadena de datos XML a escribir en el archivo.
+     * @param nombreArchivo  Nombre del archivo XML a generar.
+     */
     private void guardarArchivoXML(String xmlData, String nombreArchivo) {
         try (FileWriter fileWriter = new FileWriter(nombreArchivo)) {
             fileWriter.write(xmlData);
