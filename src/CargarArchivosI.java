@@ -10,10 +10,14 @@ import java.util.List;
 
 public interface CargarArchivosI<T> {
     /**
-     * Carga datos desde un archivo ubicado en la ruta especificada y los devuelve como una lista de objetos del tipo genérico T.
+     * Carga datos desde un archivo ubicado en la ruta especificada y los devuelve
+     * 
+     * como una lista de objetos del tipo genérico T.
      *
      * @param filePath La ruta del archivo desde el cual cargar los datos.
-     * @return Una lista de objetos del tipo genérico T que representan los datos cargados desde el archivo.
+     * 
+     * @return Una lista de objetos del tipo genérico T que representan los datos
+     *         cargados desde el archivo.
      */
     List<T> loadData(String filePath);
 

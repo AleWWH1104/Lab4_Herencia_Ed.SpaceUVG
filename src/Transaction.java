@@ -1,3 +1,11 @@
+/**
+ * La clase Transaction representa una transacción financiera con información
+ * detallada, como el usuario, el monto, el número de tarjeta y otros detalles
+ * relacionados con la transacción.
+ *
+ * @version 1.0
+ * @since [Fecha de Creación]
+ */
 public class Transaction {
     private String user;
     private long id;
@@ -7,6 +15,20 @@ public class Transaction {
     private long cardNumber;
     private long expirationDate;
     private long cvv;
+
+    /**
+     * Crea una nueva instancia de la clase Transaction con la información de la
+     * transacción.
+     *
+     * @param user           Nombre del usuario que realiza la transacción.
+     * @param id             Identificador único de la transacción.
+     * @param publicKey      Clave pública para la encriptación de datos.
+     * @param amount         Monto de la transacción.
+     * @param cuotas         Número de cuotas en las que se divide la transacción.
+     * @param cardNumber     Número de la tarjeta de crédito.
+     * @param expirationDate Fecha de vencimiento de la tarjeta.
+     * @param cvv            Código de seguridad de la tarjeta (CVV).
+     */
 
     public Transaction(String user, long id, String publicKey, double amount, long cuotas, long cardNumber,
             long expirationDate, long cvv) {
@@ -20,6 +42,8 @@ public class Transaction {
         this.cvv = cvv;
     }
 
+    // Métodos getters y setters para acceder y modificar los atributos de la
+    // transacción
     public String getUser() {
         return user;
     }

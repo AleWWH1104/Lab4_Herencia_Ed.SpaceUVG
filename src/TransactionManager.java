@@ -2,8 +2,27 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * La clase TransactionManager se encarga de procesar los datos cargados desde
+ * un archivo JSON y crear instancias de transacciones Visa, MasterCard y
+ * American Express según el tipo de tarjeta. Luego, genera archivos XML, JSON y
+ * CSV con la información de las transacciones.
+ *
+ * @version 1.0
+ * @author Jonathan y David
+ * @since 3 11 23
+ */
 public class TransactionManager {
 
+    /**
+     * Procesa los datos cargados desde un archivo JSON y crea instancias de
+     * transacciones Visa, MasterCard y American Express según el tipo de tarjeta.
+     * Luego, genera archivos XML, JSON y CSV con la información de las
+     * transacciones.
+     *
+     * @param jsonData Los datos cargados desde el archivo JSON en forma de una
+     *                 lista de mapas.
+     */
     public static void cargas(List<HashMap<String, Object>> jsonData) {
         List<Visa> transaccionesVisa = new ArrayList<>();
         List<AmericanExpress> transaccionesAEX = new ArrayList<>();

@@ -2,25 +2,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-/**
- * La clase CSVGenerator implementa la interfaz GenerarArchivosI y se encarga de
- * generar archivos CSV a partir de una lista de transacciones de
- * AmericanExpress.
- * 
- * @author Iris
- * @version 1.0
- * @since 3 11 23
- */
 public class CSVGenerator implements GenerarArchivosI<AmericanExpress> {
 
-    /**
-     * Genera un archivo CSV a partir de una lista de transacciones de American
-     * Express y lo guarda en la ruta especificada.
-     *
-     * @param transacciones  Lista de transacciones de American Express a ser
-     *                       convertidas en un archivo CSV.
-     * @param rutaArchivoCSV Ruta del archivo CSV de salida.
-     */
     @Override
     public void generarArchivo(List<AmericanExpress> transacciones, String rutaArchivoCSV) {
         rutaArchivoCSV = rutaArchivoCSV + ".csv";
