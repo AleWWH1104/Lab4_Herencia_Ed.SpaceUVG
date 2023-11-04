@@ -5,9 +5,7 @@ import java.util.HashMap;
 
 // Si el primer dígito de la tarjeta es un 5 entonces es una tarjeta Mastercard
 
-public class MasterCard extends Transaction {
-
-    private long cifEmperador;
+public class MasterCard extends Transaction implements Pasarela_Pago{
 
     private StringBuilder hashMD5;
     public StringBuilder getHashMD5() {
@@ -22,21 +20,14 @@ public class MasterCard extends Transaction {
         return cifradoEmperador.cifrar(this.getCardNumber(), 3);
     }
 
-    private StringBuilder generateHashMD5(String input) {
-        try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            byte[] hashBytes = md.digest(input.getBytes());
+    @Override
+    public void cambiar_pasarela(Pasarela_Pago nuevaPasarela) {
+    }
 
-            StringBuilder hashString = new StringBuilder();
-            for (byte b : hashBytes) {
-                hashString.append(String.format("%02x", b));
-            }
-
-            return hashString;
-        } catch (NoSuchAlgorithmException e) {
-            System.err.println("Algoritmo MD5 no compatible.");
-            return new StringBuilder();
-        }
+    @Override
+    public void procesar_pago() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'procesar_pago'");
     }
 
 }
