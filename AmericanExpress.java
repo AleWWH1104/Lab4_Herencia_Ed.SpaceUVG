@@ -12,6 +12,7 @@ public class AmericanExpress extends Transaction implements Pasarela_Pago {
             int expirationDate, int cvv) {
         super(user, id, publicKey, amount, cuotas, cardNumber, expirationDate, cvv);
         this.hashMD5 = generateHashMD5(user);
+        procesar_pago();
     }
 
     @Override
@@ -21,7 +22,7 @@ public class AmericanExpress extends Transaction implements Pasarela_Pago {
         int cuotas = this.getCuotas();
         if (cuotas > 1) {
             servicio += 0.15 * montoOriginal;
-            
+
         }
         double nuevoMonto = montoOriginal + servicio;
         this.setAmount(nuevoMonto);
