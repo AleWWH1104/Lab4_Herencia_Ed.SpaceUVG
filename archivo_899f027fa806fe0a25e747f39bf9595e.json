@@ -1,0 +1,16 @@
+[
+    {
+        "amount": 50.0,
+        "id": 13579,
+        "publicKey": "claveP4",
+        "user": "EjemploUsuario4",
+        "cardNumber": 8888999900001111
+    },
+    {
+        "amount": 95.25,
+        "id": 77777,
+        "publicKey": "claveP10",
+        "user": "EjemploUsuario10",
+        "cardNumber": 8888777766665555
+    }
+]

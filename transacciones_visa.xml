@@ -1,16 +1,37 @@
 <Transacciones>
   <Transaccion>
-    <User>Usuario1</User>
-    <Id>1</Id>
-    <PublicKey>Public1</PublicKey>
-    <Amount>100.0</Amount>
+    <User>EjemploUsuario1</User>
+    <Id>12345</Id>
+    <PublicKey>claveP1</PublicKey>
+    <Amount>100.5</Amount>
     <!-- Otros campos de la transacción -->
   </Transaccion>
   <Transaccion>
-    <User>Usuario2</User>
-    <Id>2</Id>
-    <PublicKey>Public2</PublicKey>
-    <Amount>200.0</Amount>
+    <User>EjemploUsuario2</User>
+    <Id>67890</Id>
+    <PublicKey>claveP2</PublicKey>
+    <Amount>75.25</Amount>
+    <!-- Otros campos de la transacción -->
+  </Transaccion>
+  <Transaccion>
+    <User>EjemploUsuario6</User>
+    <Id>86420</Id>
+    <PublicKey>claveP6</PublicKey>
+    <Amount>80.75</Amount>
+    <!-- Otros campos de la transacción -->
+  </Transaccion>
+  <Transaccion>
+    <User>EjemploUsuario11</User>
+    <Id>55555</Id>
+    <PublicKey>claveP11</PublicKey>
+    <Amount>175.5</Amount>
+    <!-- Otros campos de la transacción -->
+  </Transaccion>
+  <Transaccion>
+    <User>EjemploUsuario12</User>
+    <Id>22222</Id>
+    <PublicKey>claveP12</PublicKey>
+    <Amount>60.0</Amount>
     <!-- Otros campos de la transacción -->
   </Transaccion>
 </Transacciones>

@@ -1,6 +1,8 @@
 /**
- * La clase MasterCard representa una transacción realizada con una tarjeta Mastercard.
- * Extiende la clase Transaction e incluye métodos específicos para esta tarjeta.
+ * La clase MasterCard representa una transacción realizada con una tarjeta
+ * Mastercard.
+ * Extiende la clase Transaction e incluye métodos específicos para esta
+ * tarjeta.
  * 
  * @author David Dominguez
  * @version 1.0
@@ -10,18 +12,20 @@
 public class MasterCard extends Transaction {
 
     /**
-     * Crea una nueva instancia de la clase MasterCard con la información de la transacción.
+     * Crea una nueva instancia de la clase MasterCard con la información de la
+     * transacción.
      *
-     * @param user          Nombre del usuario que realiza la transacción.
-     * @param id            Identificador único de la transacción.
-     * @param publicKey     Clave pública para la encriptación de datos.
-     * @param amount        Monto de la transacción.
-     * @param cardNumber    Número de la tarjeta de crédito.
+     * @param user           Nombre del usuario que realiza la transacción.
+     * @param id             Identificador único de la transacción.
+     * @param publicKey      Clave pública para la encriptación de datos.
+     * @param amount         Monto de la transacción.
+     * @param cardNumber     Número de la tarjeta de crédito.
      * @param expirationDate Fecha de vencimiento de la tarjeta.
-     * @param cvv           Código de seguridad de la tarjeta (CVV).
-     * @param cuotas        Número de cuotas en las que se divide la transacción.
+     * @param cvv            Código de seguridad de la tarjeta (CVV).
+     * @param cuotas         Número de cuotas en las que se divide la transacción.
      */
-    public MasterCard(String user, int id, String publicKey, double amount, long cardNumber, int expirationDate, int cvv, int cuotas) {
+    public MasterCard(String user, long id, String publicKey, double amount, long cuotas, long cardNumber,
+            long expirationDate, long cvv) {
         super(user, id, publicKey, amount, cuotas, cardNumber, expirationDate, cvv);
     }
 

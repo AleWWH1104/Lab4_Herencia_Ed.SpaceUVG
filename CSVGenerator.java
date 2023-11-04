@@ -2,22 +2,23 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
-public class CSVGenerator implements GenerarArchivosI<AmericanExpress>{
-    
+public class CSVGenerator implements GenerarArchivosI<AmericanExpress> {
+
     @Override
     public void generarArchivo(List<AmericanExpress> transacciones, String rutaArchivoCSV) {
+        rutaArchivoCSV = rutaArchivoCSV + ".csv";
         try (FileWriter writer = new FileWriter(rutaArchivoCSV, true)) { // El true indica que se añadirán datos al
                                                                          // archivo existente
             for (AmericanExpress transaccion : transacciones) {
                 // Obtener los datos de la transacción
                 String usuario = transaccion.getUser();
-                int id = transaccion.getId();
+                long id = transaccion.getId();
                 String public_key = transaccion.getPublicKey();
                 double monto = transaccion.getAmount();
-                int cuotas = transaccion.getCuotas();
+                long cuotas = transaccion.getCuotas();
                 long numero_de_tarjeta = transaccion.getCardNumber();
-                int fecha_de_vencimiento = transaccion.getExpirationDate();
-                int codigo_CVV = transaccion.getCvv();
+                long fecha_de_vencimiento = transaccion.getExpirationDate();
+                long codigo_CVV = transaccion.getCvv();
                 StringBuilder hashMD5 = transaccion.getHashMD5();
 
                 // Escribir los datos al archivo CSV

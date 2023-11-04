@@ -15,7 +15,7 @@
         "public_key": "claveP2",
         "monto": 75.25,
         "cuotas": 2,
-        "numero_de_tarjeta": 9876543210987654,
+        "numero_de_tarjeta": 4876543210987654,
         "fecha_de_vencimiento": 0624,
         "codigo_CVV": 456
     },
@@ -25,7 +25,7 @@
         "public_key": "claveP3",
         "monto": 200.75,
         "cuotas": 4,
-        "numero_de_tarjeta": 1111222233334444,
+        "numero_de_tarjeta": 5111222233334444,
         "fecha_de_vencimiento": 0923,
         "codigo_CVV": 789
     },
@@ -45,7 +45,7 @@
         "public_key": "claveP5",
         "monto": 150.25,
         "cuotas": 5,
-        "numero_de_tarjeta": 9999000011112222,
+        "numero_de_tarjeta": 3999000011112222,
         "fecha_de_vencimiento": 1127,
         "codigo_CVV": 987
     },
@@ -55,7 +55,7 @@
         "public_key": "claveP6",
         "monto": 80.75,
         "cuotas": 3,
-        "numero_de_tarjeta": 7777666655554444,
+        "numero_de_tarjeta": 4777666655554444,
         "fecha_de_vencimiento": 0823,
         "codigo_CVV": 543
     },
@@ -65,7 +65,7 @@
         "public_key": "claveP7",
         "monto": 120.00,
         "cuotas": 2,
-        "numero_de_tarjeta": 1234123412341234,
+        "numero_de_tarjeta": 5234123412341234,
         "fecha_de_vencimiento": 0525,
         "codigo_CVV": 789
     },
@@ -75,7 +75,7 @@
         "public_key": "claveP8",
         "monto": 70.50,
         "cuotas": 3,
-        "numero_de_tarjeta": 2222333344445555,
+        "numero_de_tarjeta": 3222333344445555,
         "fecha_de_vencimiento": 1024,
         "codigo_CVV": 654
     },
@@ -85,7 +85,7 @@
         "public_key": "claveP9",
         "monto": 250.75,
         "cuotas": 6,
-        "numero_de_tarjeta": 7777888899990000,
+        "numero_de_tarjeta": 3777888899990000,
         "fecha_de_vencimiento": 0128,
         "codigo_CVV": 123
     },
@@ -115,7 +115,7 @@
         "public_key": "claveP12",
         "monto": 60.00,
         "cuotas": 2,
-        "numero_de_tarjeta": 9999888877776666,
+        "numero_de_tarjeta": 4999888877776666,
         "fecha_de_vencimiento": 0426,
         "codigo_CVV": 246
     },
@@ -135,7 +135,7 @@
         "public_key": "claveP14",
         "monto": 90.75,
         "cuotas": 3,
-        "numero_de_tarjeta": 7777666655554444,
+        "numero_de_tarjeta": 5777666655554444,
         "fecha_de_vencimiento": 0623,
         "codigo_CVV": 543
     },

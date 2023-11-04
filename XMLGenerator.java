@@ -15,6 +15,7 @@ public class XMLGenerator implements GenerarArchivosI<Visa> {
      */
     @Override
     public void generarArchivo(List<Visa> transacciones, String nombreArchivo) {
+        nombreArchivo = nombreArchivo + ".xml";
         StringBuilder xmlData = new StringBuilder();
         xmlData.append("<Transacciones>\n");
         for (Visa visa : transacciones) {

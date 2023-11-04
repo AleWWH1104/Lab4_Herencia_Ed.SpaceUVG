@@ -1,14 +1,15 @@
 public class Transaction {
     private String user;
-    private int id;
+    private long id;
     private String publicKey;
     private double amount;
-    private int cuotas;
+    private long cuotas;
     private long cardNumber;
-    private int expirationDate;
-    private int cvv;
+    private long expirationDate;
+    private long cvv;
 
-    public Transaction(String user, int id, String publicKey, double amount, int cuotas, long cardNumber, int expirationDate, int cvv) {
+    public Transaction(String user, long id, String publicKey, double amount, long cuotas, long cardNumber,
+            long expirationDate, long cvv) {
         this.user = user;
         this.id = id;
         this.publicKey = publicKey;
@@ -27,11 +28,11 @@ public class Transaction {
         this.user = user;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -51,11 +52,11 @@ public class Transaction {
         this.amount = amount;
     }
 
-    public int getCuotas() {
+    public long getCuotas() {
         return cuotas;
     }
 
-    public void setCuotas(int cuotas) {
+    public void setCuotas(long cuotas) {
         this.cuotas = cuotas;
     }
 
@@ -67,19 +68,19 @@ public class Transaction {
         this.cardNumber = cardNumber;
     }
 
-    public int getExpirationDate() {
+    public long getExpirationDate() {
         return expirationDate;
     }
 
-    public void setExpirationDate(int expirationDate) {
+    public void setExpirationDate(long expirationDate) {
         this.expirationDate = expirationDate;
     }
 
-    public int getCvv() {
+    public long getCvv() {
         return cvv;
     }
 
-    public void setCvv(int cvv) {
+    public void setCvv(long cvv) {
         this.cvv = cvv;
     }
 }

@@ -1,19 +1,68 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class TransactionManager {
-    public static void main(String[] args) {
+
+    public static void cargas(List<HashMap<String, Object>> jsonData) {
         List<Visa> transaccionesVisa = new ArrayList<>();
+        List<AmericanExpress> transaccionesAEX = new ArrayList<>();
+        List<MasterCard> transaccionesMasterCard = new ArrayList<>();
 
-        // Crear objetos de Visa y agregarlos a la lista
-        Visa transaccion1 = new Visa("Usuario1", 1, "Public1", 100.0, 0, 1234567890123456L, 1224, 123);
-        Visa transaccion2 = new Visa("Usuario2", 2, "Public2", 200.0, 0, 2345678901234567L, 0623, 456);
+        for (HashMap<String, Object> item : jsonData) {
+            Object numeroDeTarjetaObj = item.get("numero_de_tarjeta");
 
-        transaccionesVisa.add(transaccion1);
-        transaccionesVisa.add(transaccion2);
+            if (numeroDeTarjetaObj != null) {
+                if (numeroDeTarjetaObj instanceof Long) {
+                    Long numeroDeTarjeta = (Long) numeroDeTarjetaObj;
+                    String usuario = (String) item.get("usuario");
+                    Long id = (Long) item.get("id");
+                    String public_key = (String) item.get("public_key");
+                    double monto = (double) item.get("monto");
+                    Long cuotas = (Long) item.get("cuotas");
+                    Long fecha_de_vencimiento = (Long) item.get("fecha_de_vencimiento");
+                    Long cvv = (Long) item.get("codigo_CVV");
 
+                    String numeroDeTarjetaS = numeroDeTarjeta.toString();
+
+                    char primerDigito = numeroDeTarjetaS.charAt(0);
+                    if (primerDigito == '4') {
+                        System.out.println("Visa");
+                        Visa transaccionVisa = new Visa(usuario, id, public_key, monto, cuotas, numeroDeTarjeta,
+                                fecha_de_vencimiento, cvv);
+                        transaccionesVisa.add(transaccionVisa);
+                    } else if (primerDigito == '5') {
+                        System.out.println("MasterCard");
+                        MasterCard transaccionMC = new MasterCard(usuario, id, public_key, monto, cuotas,
+                                numeroDeTarjeta,
+                                fecha_de_vencimiento, cvv);
+                        transaccionesMasterCard.add(transaccionMC);
+                    } else if (primerDigito == '3') {
+                        System.out.println("American Express");
+                        AmericanExpress trannAEX = new AmericanExpress(numeroDeTarjetaS, id, public_key, monto, cuotas,
+                                fecha_de_vencimiento, primerDigito, cvv);
+                        transaccionesAEX.add(trannAEX);
+                    } else {
+                        System.out.println("No inicia con ninguno");
+                    }
+                } else if (numeroDeTarjetaObj instanceof String) {
+                    String numeroDeTarjetaS = (String) numeroDeTarjetaObj;
+                    // Aquí puedes manejar los casos en los que el número de tarjeta es una cadena.
+                    // Por ejemplo, puedes verificar el primer dígito y realizar las acciones
+                    // necesarias.
+                }
+            }
+        }
         // Generar el archivo XML con la información de las transacciones Visa
         XMLGenerator xmlGenerator = new XMLGenerator();
-        xmlGenerator.generarArchivo(transaccionesVisa, "transacciones_visa.xml");
+        generarArchivo(xmlGenerator, transaccionesVisa, "transacciones_visa");
+        JSONManager jsonManager = new JSONManager();
+        generarArchivo(jsonManager, transaccionesMasterCard, "temp_JSON");
+        CSVGenerator AEXGenerator = new CSVGenerator();
+        generarArchivo(AEXGenerator, transaccionesAEX, "transacciones_AmEx");
+    }
+
+    private static <T> void generarArchivo(GenerarArchivosI<T> tipo, List<T> transacciones, String path) {
+        tipo.generarArchivo(transacciones, path);
     }
 }

@@ -15,7 +15,8 @@ import java.util.Map;
 import com.google.gson.Gson;
 
 /**
- * La clase JSONManager se encarga de cargar datos desde un archivo JSON y generar archivos JSON a partir de transacciones MasterCard.
+ * La clase JSONManager se encarga de cargar datos desde un archivo JSON y
+ * generar archivos JSON a partir de transacciones MasterCard.
  * Implementa las interfaces GenerarArchivosI y CargarArchivosI.
  *
  * @author Jonathan Diaz & David Dominguez
@@ -28,10 +29,12 @@ public class JSONManager implements GenerarArchivosI<MasterCard>, CargarArchivos
      * Carga datos desde un archivo JSON y los devuelve como una lista de mapas.
      *
      * @param filePath Ruta del archivo JSON desde el cual cargar los datos.
-     * @return Una lista de mapas que representan los datos cargados desde el archivo JSON.
+     * @return Una lista de mapas que representan los datos cargados desde el
+     *         archivo JSON.
      */
     @Override
     public List<HashMap<String, Object>> loadData(String filePath) {
+        filePath = filePath + ".json";
         JSONParser parser = new JSONParser();
         List<HashMap<String, Object>> data = new ArrayList<>();
 
@@ -56,8 +59,9 @@ public class JSONManager implements GenerarArchivosI<MasterCard>, CargarArchivos
     /**
      * Genera un archivo JSON a partir de una lista de transacciones MasterCard.
      *
-     * @param transacciones     Lista de transacciones de MasterCard a ser convertidas en JSON.
-     * @param rutaArchivoJSON   Ruta del archivo JSON de salida.
+     * @param transacciones   Lista de transacciones de MasterCard a ser convertidas
+     *                        en JSON.
+     * @param rutaArchivoJSON Ruta del archivo JSON de salida.
      */
     @Override
     public void generarArchivo(List<MasterCard> transacciones, String rutaArchivoJSON) {

@@ -19,7 +19,9 @@ public class Visa extends Transaction implements Pasarela_Pago {
      * @param expirationDate Fecha de vencimiento de la tarjeta.
      * @param cvv            Código de seguridad CVV.
      */
-    public Visa(String user, int id, String publicKey, double amount, int cuotas, long cardNumber, int expirationDate, int cvv) {
+    public Visa(String user, long id, String publicKey, double amount, long cuotas, long cardNumber,
+            long expirationDate,
+            long cvv) {
         super(user, id, publicKey, amount, cuotas, cardNumber, expirationDate, cvv);
     }
 
@@ -36,7 +38,8 @@ public class Visa extends Transaction implements Pasarela_Pago {
     }
 
     /**
-     * Cambia la pasarela actual a otra pasarela Visa, copiando los atributos de la nueva pasarela.
+     * Cambia la pasarela actual a otra pasarela Visa, copiando los atributos de la
+     * nueva pasarela.
      *
      * @param nuevaPasarela Nueva pasarela Visa.
      */

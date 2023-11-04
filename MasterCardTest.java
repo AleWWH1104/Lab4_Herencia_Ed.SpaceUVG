@@ -13,7 +13,9 @@ public class MasterCardTest {
     @Test
     public void testGetCifEmperador() {
 
-        MasterCard masterCard = new MasterCard("Usuario", 1, "clavePublica", 100.0, 5123456789012345L, 1231, 123, 6);
+        // String user, int id, String publicKey, double amount, int cuotas, long
+        // cardNumber, int expirationDate, int cvv
+        MasterCard masterCard = new MasterCard("Usuario", 1, "clavePublica", 100.0, 12, 5123456789012345L, 1212, 123);
 
         long cifradoEsperado = cifradoEmperador.cifrar(5123456789012345L, 3);
 
@@ -23,16 +25,17 @@ public class MasterCardTest {
     @Test
     public void testConstructor() {
         // Crea una instancia de MasterCard con valores de ejemplo
-        MasterCard masterCard = new MasterCard("Usuario", 1, "clavePublica", 100.0, 5123456789012345L, 1231, 123, 6);
+        MasterCard masterCard = new MasterCard("Usuario", 1, "clavePublica", 100.0, 12, 5123456789012345L, 1212, 123);
 
-        // Comprueba si los valores de los atributos se han configurado correctamente en el constructor
+        // Comprueba si los valores de los atributos se han configurado correctamente en
+        // el constructor
         assertEquals("Usuario", masterCard.getUser());
         assertEquals(1, masterCard.getId());
         assertEquals("clavePublica", masterCard.getPublicKey());
         assertEquals(100.0, masterCard.getAmount(), 0.001); // Usamos delta para comparar valores de punto flotante
         assertEquals(5123456789012345L, masterCard.getCardNumber());
-        assertEquals(1231, masterCard.getExpirationDate());
+        assertEquals(1212, masterCard.getExpirationDate());
         assertEquals(123, masterCard.getCvv());
-        assertEquals(6, masterCard.getCuotas());
+        assertEquals(12, masterCard.getCuotas());
     }
 }
